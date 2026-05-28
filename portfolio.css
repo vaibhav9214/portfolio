@@ -1,0 +1,300 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: rgb(6, 9, 63); /* Move base background here so it does not override elements globally */
+}
+ nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid whitesmoke;
+}
+#nav {
+    display: flex;
+    background-color: rgb(2, 2, 26);
+    color: white;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 2rem;
+}
+
+#about {
+    display: flex;
+    gap: 1.5rem; 
+} 
+
+.ab {
+    color: white;
+    text-decoration: none; 
+    font-size: 1.1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.ab:hover {
+    opacity: 0.8;
+    border-bottom: 2px solid rgb(75, 75, 250);
+}
+
+span {
+    color: rgb(75, 75, 250);
+}
+
+#main {
+    height: 30rem;
+    display: flex;
+    margin-top: 3rem;
+}
+
+#front {
+    height: 30rem;
+    width: 50%;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    padding-left: 20px;
+    line-height: 3rem;
+}
+#front:hover{
+    border: 2px solid white;
+    border-radius: 5px;
+}
+#img {
+    height: 30rem;
+    width: 50%;
+    background-image: url(man-computer-works-picture-you-can-use-your-presentations-business-to-demonstrate-work-blue-color-gives-style-136368560.webp);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+/* --- BUTTON FIXES --- */
+#personal {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1.5rem; /* Creates perfect gap spacing between boxes */
+}
+
+.per {
+    display: flex;
+    align-items: center;     /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    height: 3rem;
+    padding: 0 1.5rem;       /* Dynamic width padding */
+    color: cornflowerblue;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.per:hover {
+    background-color: rgb(75, 75, 250);
+    color: white;
+    border-color: rgb(75, 75, 250);
+}
+
+#social {
+    width: 10rem;
+    display: flex;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+#social i {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#social i:hover {
+    color: rgb(75, 75, 250);
+}
+
+.about{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    background-color: rgb(24, 13, 71);
+
+}
+#info{
+
+    width: 50%;
+    color: white;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 5%;
+
+   
+}
+#info:hover{
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#info span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(75, 75, 250);
+       display: block;     /* Critical: Allows margin to push items down */
+    margin-bottom: 1.5rem; /* Creates the gap below the title */
+}
+
+#info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+     margin-bottom: 2rem;/* Creates a clean gap between the text and the button */
+}
+
+#info a {
+    display: inline-flex;  /* Keeps the button tightly bound to content size */
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem; /* Creates breathing room inside the box border */
+    color: cornflowerblue;  /* Changes text color so it is highly readable */
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#info a:hover {
+    background-color: rgb(75, 75, 250);
+    color: white;
+    border-color: rgb(75, 75, 250);
+}
+
+#pic{
+    height: 250px;
+    width: 250px;
+    flex-shrink: 0;
+    background-image: url(man_person_people_avatar_icon_230017.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: 4rem;
+}
+
+#head {
+    height: auto; /* Allow section to grow with content */
+    margin: 4rem 2rem;
+}
+
+#skill {
+    height: fit-content;
+    color: white;
+    margin-bottom: 2rem; /* Clean margin spacing instead of a rigid container height */
+    width: max-content;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#icon {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    /* Groups items from the left side */
+     /* Creates perfect, even spaces between all cards */
+}
+
+/* Target all individual skill container IDs together */
+#html, #css, #javasc, #c, #git {
+    height: 6rem; /* Extra height to accommodate both image and text */
+    width: 5rem;  /* FIXED: Giving it a width brings your images back! */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes the text label to the absolute bottom */
+    align-items: center;
+    
+    color: white;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-align: center;
+    
+    /* Background Image Adjustments */
+    background-position: top center; /* Centers the logo image at the top of the box */
+    background-size: 3.5rem 3.5rem;   /* Forces the logo to be a neat, consistent square size */
+    background-repeat: no-repeat;
+    border: 3px solid rgb(217, 218, 236);
+    
+    transition: transform 0.2s ease;
+}
+
+/* Interactive Hover effect to make your skill items pop */
+#html:hover, #css:hover, #javasc:hover, #c:hover, #git:hover {
+    transform: translateY(-5px); /* Smoothly lifts the item upward */
+}
+
+#footer{
+    color: white;
+    height: auto;
+    background-color: rgb(2, 2, 26);
+    border-top: 2px solid whitesmoke;
+}
+ #con{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+ }
+#details{
+    width: 20rem;
+    padding-left: 2rem;
+    border-right: 2px solid rgb(127, 42, 213);
+    width: 50%;
+}
+#contact{
+    padding-left: 2rem;
+    height: 2rem;
+    padding-top: 1rem;
+}
+#details p  a{
+    text-decoration: none;
+    color: rgb(108, 112, 195);
+}
+#feed{
+    gap: 1rem;
+    display: flex;
+     flex-direction: column;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    padding-left: 10rem;
+    width: 50%;
+}
+
+#name,#email,#message{
+    border: 1px solid rgb(1, 2, 13);
+    background-color: rgb(2, 2, 26);
+    border-radius: 50px;
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+     transition: transform 0.2s ease;
+}
+
+#name:hover,#email:hover,#message:hover{
+    border: 2px solid white;
+     transform: translateY(-5px);
+
+}
+
+
+
+
+
+
+
+
